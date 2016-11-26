@@ -18,11 +18,12 @@ KEY=<Your ebay API key>
 ```
 2) You also need to include ebayfinder in your code!
 ```javascript
-var myFunctionName = require('ebayfinder);
+var myFunctionName = require('ebayfinder');
 ```
 3) Since ebayfinder has only one function, you can use its require as the function.
 ```javascript
 myFunctionName("nameOfProduct", 99, function(err, res){
     console.log('Inside ebayfinder's function call...');
+    //The output of this function is also automatically logged to your console.
 });
 ```
