@@ -18,6 +18,8 @@
   "homepage": "https://github.com/MattGable/ebayfinder#readme",
   "dependencies": {
     "dotenv": "^2.0.0",
-    "ebay-api": "^1.13.1"
+    "ebay-api": "^1.13.1",
+    "http": "0.0.0",
+    "https": "^1.0.0"
   }
 }
