@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/MattGable/ebayfinder/issues"
   },
-  "homepage": "https://github.com/MattGable/ebayfinder#readme"
+  "homepage": "https://github.com/MattGable/ebayfinder#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "ebay-api": "^1.13.1"
+  }
 }
