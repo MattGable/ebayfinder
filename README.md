@@ -12,7 +12,7 @@ Edit your package.json to include:
 ```
 ##Using ebayfinder
 1) ebayfinder uses dotenv, which requires a .env file (a place to hide your API key).<br />
-Add a .env file to the root of your application with the following vairable:
+Add a .env file to the root of your application with the following variable:
 ```shell
 KEY=<Your ebay API key>
 ```
