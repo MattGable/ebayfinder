@@ -1,7 +1,7 @@
 #Package installation instructions
 ebayfinder is a node.js add-on and is a quick way to search ebay for an item based <br />
 on its maximum price.<br />
-##Dependencies used (dotenv, ebay-api, http, https)
+##Dependencies used (dotenv, ebay-api)
 ```shell
 npm install dotenv ebay-api --save
 ```
@@ -17,7 +17,7 @@ Add a .env file to the root of your application with the following variable:
 KEY=<Your ebay API key>
 ```
 1a) Inserting your key via your choice of security measure (see ebay-api examples)<br />
-is currently suggested for porjects not utilizing dotenv, though eliminating this<br />
+is currently suggested for projects not utilizing dotenv, though eliminating this<br />
 dependency is planned.
 2) You also need to include ebayfinder in your code!
 ```javascript
