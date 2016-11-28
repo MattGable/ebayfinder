@@ -18,8 +18,8 @@ KEY=<Your ebay API key>
 ```
 1a) Inserting your key via your choice of security measure (see ebay-api examples)<br />
 is currently suggested for projects not utilizing dotenv, though eliminating this<br />
-dependency is planned.
-2) You also need to include ebayfinder in your code!
+dependency is planned.<br />
+2) Then include ebayfinder in your code:
 ```javascript
 var myFunctionName = require('ebayfinder');
 ```
