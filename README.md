@@ -30,3 +30,5 @@ myFunctionName("nameOfProduct", 99, function(err, res){
     //The output of this function is also automatically logged to your console.
 });
 ```
+This module is driven by ebay-api here:<br />
+https://github.com/benbuckman/nodejs-ebay-api<br />
