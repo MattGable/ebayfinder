@@ -25,10 +25,13 @@ var myFunctionName = require('ebayfinder');
 ```
 3) Since ebayfinder has only one function, you can use its require as the function.
 ```javascript
-myFunctionName("nameOfProduct", 99, function(err, res){
+myFunctionName(APIKEY, "nameOfProduct", 99, function(err, res){
     console.log("Inside ebayfinder's function call...");
     //The output of this function is also automatically logged to your console.
-});
+});<br />
 ```
+NOTE: Requires a production key, not a sandboxed key.<br />
+Thanks @zroberts for tips and improvements!<br />
+<br />
 This module is driven by ebay-api here:<br />
 https://github.com/benbuckman/nodejs-ebay-api<br />
