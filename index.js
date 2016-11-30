@@ -4,7 +4,7 @@ var ebay = require('ebay-api');
 require('dotenv').config();
 
 //Expose the finding function
-module.exports = function(name, price, callback) {
+module.exports = function(APIKEY, name, price, callback) {
     //Find by name and price with results limited to two
     var parameters = {
 
@@ -23,7 +23,7 @@ module.exports = function(name, price, callback) {
     ebay.xmlRequest({
             serviceName: 'Finding',
             opType: 'findItemsByKeywords',
-            appId: process.env.KEY,
+            appId: APIKEY,
             params: parameters,
             parser: ebay.parseResponseJson // (default)
         },
@@ -44,7 +44,7 @@ module.exports = function(name, price, callback) {
                         id: items[i].itemId,
                         name: items[i].title,
                         price: items[i].sellingStatus.convertedCurrentPrice.amount,
-                        salePrice: 'defaultSalePrice',
+                        salePrice: null,
                         category: items[i].primaryCategory.categoryName,
                         url: items[i].viewItemURL,
                         imageUrl: items[i].galleryURL,
