@@ -28,7 +28,7 @@ var myFunctionName = require('ebayfinder');
 myFunctionName(APIKEY, "nameOfProduct", 99, function(err, res){
     console.log("Inside ebayfinder's function call...");
     //The output of this function is also automatically logged to your console.
-});<br />
+});
 ```
 NOTE: Requires a production key, not a sandboxed key.<br />
 Thanks @zroberts for tips and improvements!<br />
