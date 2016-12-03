@@ -11,7 +11,7 @@ module.exports = function(APIKEY, name, price, callback) {
         keywords: [name],
 
         paginationInput: {
-            entriesPerPage: 2
+            entriesPerPage: 10
         },
 
         itemFilter: [
