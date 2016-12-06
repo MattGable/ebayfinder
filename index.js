@@ -33,21 +33,6 @@ module.exports = function(APIKEY, name, price, callback) {
         /************************************
         * End optional Price Logic
         * **********************************/
-    //************DEPRECATED
-    var parameters = {
-
-            keywords: [name],
-
-            paginationInput: {
-                entriesPerPage: 10
-            },
-
-            itemFilter: [
-                { name: 'MaxPrice', value: price }
-            ],
-        }
-        ///END dEPRECATED
-
     //Send request
     ebay.xmlRequest({
             serviceName: 'Finding',
