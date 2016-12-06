@@ -11,28 +11,29 @@ module.exports = function(APIKEY, name, price, callback) {
         ** Error Checking to make price Optional
         thanks @zroberts
         ***************************************/
-        if(price == null){
-           var parameters = {
-                keywords: [name],
-                paginationInput: {
-                    entriesPerPage: 2
-                }
-            } 
-        }else{
-            //console.log("price should not be 0")
-            var parameters = {
-                keywords: [name],
-                paginationInput: {
-                    entriesPerPage: 2
-                },
-                itemFilter: [
-                    { name: 'MaxPrice', value: price }
-                ],
+    if (price == null) {
+        var parameters = {
+            keywords: [name],
+            paginationInput: {
+                entriesPerPage: 10
             }
         }
-        /************************************
-        * End optional Price Logic
-        * **********************************/
+    } else {
+        //console.log("price should not be 0")
+        var parameters = {
+            keywords: [name],
+            paginationInput: {
+                entriesPerPage: 10
+            },
+            itemFilter: [
+                { name: 'MaxPrice', value: price }
+            ],
+        }
+    }
+    /************************************
+     * End optional Price Logic
+     * **********************************/
+
     //Send request
     ebay.xmlRequest({
             serviceName: 'Finding',
