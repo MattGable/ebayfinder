@@ -6,18 +6,47 @@ require('dotenv').config();
 //Expose the finding function
 module.exports = function(APIKEY, name, price, callback) {
     //Find by name and price with results limited to two
+
+    /***************************************
+        ** Error Checking to make price Optional
+        thanks @zroberts
+        ***************************************/
+        if(price == null){
+           var parameters = {
+                keywords: [name],
+                paginationInput: {
+                    entriesPerPage: 2
+                }
+            } 
+        }else{
+            //console.log("price should not be 0")
+            var parameters = {
+                keywords: [name],
+                paginationInput: {
+                    entriesPerPage: 2
+                },
+                itemFilter: [
+                    { name: 'MaxPrice', value: price }
+                ],
+            }
+        }
+        /************************************
+        * End optional Price Logic
+        * **********************************/
+    //************DEPRECATED
     var parameters = {
 
-        keywords: [name],
+            keywords: [name],
 
-        paginationInput: {
-            entriesPerPage: 10
-        },
+            paginationInput: {
+                entriesPerPage: 10
+            },
 
-        itemFilter: [
-            { name: 'MaxPrice', value: price }
-        ],
-    }
+            itemFilter: [
+                { name: 'MaxPrice', value: price }
+            ],
+        }
+        ///END dEPRECATED
 
     //Send request
     ebay.xmlRequest({
